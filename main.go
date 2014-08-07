@@ -7,13 +7,12 @@ import (
 	"time"
 
 	docker "github.com/fsouza/go-dockerclient"
-	dockerEngine "github.com/fsouza/go-dockerclient/engine"
 	kingpin "gopkg.in/alecthomas/kingpin.v1"
 )
 
 var (
 	client            *docker.Client
-	dockerVersion     *dockerEngine.Env
+	dockerVersion     *docker.Env
 	debug             bool
 	forceRemoveImages bool
 	containers        = ContainerList{make(map[string]*docker.APIContainers), make(map[string]*docker.APIContainers)}
