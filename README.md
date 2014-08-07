@@ -18,3 +18,13 @@ These two operations are something I find myself doing a lot, while iterating th
 ```bash
 go get github.com/rtlong/docker-util
 ```
+
+Or, if you don't have a Golang development env set up, you could run it in Docker...
+
+```bash
+docker build -t docker-util .
+
+docker run -v /var/run/docker.sock:/var/run/docker.sock docker-util <command>
+```
+
+Now, whether or not this is a good idea... maybe that's a different discussion.
