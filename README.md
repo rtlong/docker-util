@@ -19,12 +19,8 @@ These two operations are something I find myself doing a lot, while iterating th
 go get github.com/rtlong/docker-util
 ```
 
-Or, if you don't have a Golang development env set up, you could run it in Docker...
+Or, if you don't have a Golang development env set up, you could run it in Docker. This is built as a [Trusted Build on the Docker Hub](https://registry.hub.docker.com/u/rtlong/docker-util), so just do this:
 
 ```bash
-docker build -t docker-util .
-
-docker run -v /var/run/docker.sock:/var/run/docker.sock docker-util <command>
+docker run -v /var/run/docker.sock:/var/run/docker.sock rtlong/docker-util <command>
 ```
-
-Now, whether or not this is a good idea... maybe that's a different discussion.
